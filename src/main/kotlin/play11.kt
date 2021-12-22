@@ -1,5 +1,15 @@
 fun main() {
 
+    Outer.Nested().introduce()
+
+    val outer = Outer()
+    val inner = outer.Inner()
+
+    inner.introduceInner()
+    inner.introduceOuter()
+
+    outer.text = "Change Outer Class"
+    inner.introduceOuter()
 }
 
 class Outer {
@@ -12,6 +22,14 @@ class Outer {
     }
 
     inner class Inner {
+        var text = "Inner Class"
 
+        fun introduceInner() {
+            println(text)
+        }
+
+        fun introduceOuter() {
+            println(this@Outer.text)
+        }
     }
 }
