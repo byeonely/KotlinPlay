@@ -20,9 +20,13 @@ fun main() {
     println(bb.hashCode())
     println(bb)
 
+    println()
+
     println(bb.copy())
     println(bb.copy(name = "아린"))
     println(bb.copy(id = 618))
+
+    println()
 
     val list = listOf(Data("보영", 212),
                       Data("루다", 306),
@@ -31,6 +35,8 @@ fun main() {
     for ((a, b) in list) {
         println("${a}, ${b}")
     }
+
+    println()
 
     var state = State.SING
     println(state)
