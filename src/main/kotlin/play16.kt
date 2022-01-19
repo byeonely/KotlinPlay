@@ -27,10 +27,10 @@ class LateInitSample {
     lateinit var text: String
 
     fun getLateInitText(): String {
-        if(::text.isInitialized) {
-            return text
+        return if(::text.isInitialized) {
+            text
         } else {
-            return "기본"
+            "기본"
         }
     }
 }
