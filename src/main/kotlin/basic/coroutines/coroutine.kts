@@ -12,7 +12,7 @@ fun task2() {
 
 println("start")
 
-run {
+runBlocking {
     task1()
     task2()
     println("called task1 and task2 from ${Thread.currentThread()}")

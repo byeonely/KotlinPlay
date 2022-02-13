@@ -14,7 +14,10 @@ repositories {
 dependencies {
     testImplementation(kotlin("test"))
     implementation(kotlin("script-runtime"))
+//    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.5")
 }
+
 
 tasks.test {
     useJUnit()
