@@ -3,4 +3,8 @@
 *.tab*
 *.at
 *.keystream
-*.len
+*.len용
+*.class
+*.txt
+*.jar
+*.MF
