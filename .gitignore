@@ -8,3 +8,73 @@
 *.txt
 *.jar
 *.MF
+
+
+# gradle
+.gradle/
+local.properties
+
+#python
+venv/
+*.egg-info
+
+# intellij
+.idea/
+build/
+out/
+*.iml
+
+# eclipse
+.project
+.classpath
+.settings/
+bin/
+
+#node
+node_modules/
+
+#webpack
+dist/
+
+# elm
+elm-stuff/
+
+#stellar
+stellar.yaml
+
+#local configuration for smart-controller & skill-builder
+configuration.properties
+config.properties
+
+feature.properties
+
+#ignore local usb-root
+/usb-root
+
+#macos
+.DS_Store
+
+logs/
+tmp/
+
+repo/
+scripts/
+distribution/
+drl/
+
+#packet dumps
+/in.bin
+/out.bin
+/packet-data.json
+
+#dra-smaps
+/smaps.db
+
+hs_err_pid*.log
+
+#window lock file
+SingleProcess.lock
+SingleInstanceLog.txt
+
+# 윈도우에서 마지막에 접속한 IP 정보를 저장하고 있는 파일
+lastConnectionInfo.txt
