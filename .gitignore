@@ -1,9 +1,9 @@
 *.bin
 *.lock
-*.tab*
+*.tab
 *.at
 *.keystream
-*.len용
+*.len
 *.class
 *.txt
 *.jar
