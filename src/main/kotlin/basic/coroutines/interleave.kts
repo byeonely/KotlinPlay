@@ -31,6 +31,7 @@ runBlocking {
     launch(Dispatchers.Default) { task1() }
 
     // task2()의 코드는 main 스레드에서 실행됨
+    // launch 에 인자가 없으면 동시 실행됨
     // 동시 실행됨
     launch { task2() }
     println("called task1 and task2 from ${Thread.currentThread()}")
