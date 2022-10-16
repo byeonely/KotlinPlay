@@ -29,8 +29,6 @@ fun highOlder2(sum: (Int, Int) -> Int, a: Int, b: Int): (Int, Int) -> Int {
     return sum3
 }
 
-fun sum2(x: Int, y: Int): Int {
-    return x + y
-}
+fun sum2(x: Int, y: Int): Int = x + y
 
 val sum3 = {x: Int, y: Int -> x + y}
