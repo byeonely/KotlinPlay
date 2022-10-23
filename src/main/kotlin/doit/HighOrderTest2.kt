@@ -7,6 +7,11 @@ fun main() {
     println(result)
     result = highOrder(sum3, 30, 40)
     println(result)
+
+    // lambda 함수를 매개변수로 lambda 라는 함수 이름만 넘기면 함수식 자체가 넘어가고
+    // lambda() 라는 함수 이름 뒤에 () 괄호를 붙여서 넘기면 해당 시점에 함수를 실행(호출)시킨 후 리턴값이 매개변수로 넘어감
+    // 즉 함수를 호출하냐 안하냐는 () 괄호로 결정됨
+    normalFunction(lambda3())
 }
 
 // 고차함수
@@ -21,6 +26,8 @@ fun main() {
 // 함수를 변수처럼 주고받게 되면 이쪽 저쪽 다른쪽에서도 함수의 로직이 사용 가능하게 됨
 // 함수가 갖고 있는 로직의 재활용 및 반복문에 적용하면 파워풀해질 것 같음
 fun highOrder(sum: (Int, Int) -> Int, a: Int, b: Int): Int {
+    // CallByName 인자로 넘어온 sum 을 고차함수 내에서 이 시점에 호출(실행)함
+    // 람다함수 호출시점을 본 고차함수 내에서 결정할 수 있음
     val value = sum(a, b)
     return sum(a, b + value)
 }
@@ -28,6 +35,14 @@ fun highOrder(sum: (Int, Int) -> Int, a: Int, b: Int): Int {
 fun highOlder2(sum: (Int, Int) -> Int, a: Int, b: Int): (Int, Int) -> Int {
     return sum3
 }
+
+fun normalFunction(value: Int) {
+    println("value : $value")
+}
+
+// 람다함수는 fun 으로 정의하지 않고 변수로 취급해서 val 이나 var 에 할당함
+// 본래 람다함수는 이름이 없는 함수이므로 fun 구문 없이 {} 문으로 정의가 끝나고 그 이름이 없는 함수를 변수에 담음으로서 식별할 수 있는 이름을 부여해주는 것임
+val lambda3: () -> Int = { 1 + 2 }
 
 fun sum2(x: Int, y: Int): Int = x + y
 
